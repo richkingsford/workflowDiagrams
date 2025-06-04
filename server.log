@@ -1,0 +1,20 @@
+127.0.0.1 - - [04/Jun/2025 17:43:04] "GET / HTTP/1.1" 200 -
+10.2.58.81 - - [04/Jun/2025 17:43:10] "GET / HTTP/1.1" 200 -
+10.2.58.81 - - [04/Jun/2025 17:43:10] "GET /output/product_management_workflow.png HTTP/1.1" 200 -
+10.2.58.81 - - [04/Jun/2025 17:44:49] "GET / HTTP/1.1" 200 -
+10.2.58.81 - - [04/Jun/2025 17:44:49] "GET /output/product_management_workflow.png HTTP/1.1" 200 -
+10.2.58.81 - - [04/Jun/2025 17:44:49] code 404, message File not found
+10.2.58.81 - - [04/Jun/2025 17:44:49] "GET /favicon.ico HTTP/1.1" 404 -
+10.2.34.24 - - [04/Jun/2025 17:45:09] "GET / HTTP/1.1" 304 -
+10.2.34.24 - - [04/Jun/2025 17:45:25] "GET / HTTP/1.1" 304 -
+10.2.58.81 - - [04/Jun/2025 17:47:59] "GET / HTTP/1.1" 304 -
+10.2.58.81 - - [04/Jun/2025 17:47:59] "GET /output/product_management_workflow.png HTTP/1.1" 304 -
+10.2.58.81 - - [04/Jun/2025 17:48:04] "GET / HTTP/1.1" 304 -
+10.2.58.81 - - [04/Jun/2025 17:49:06] "GET / HTTP/1.1" 304 -
+10.2.58.81 - - [04/Jun/2025 17:49:06] "GET /output/product_management_workflow.png HTTP/1.1" 304 -
+10.2.58.81 - - [04/Jun/2025 17:56:51] "GET / HTTP/1.1" 304 -
+10.2.74.140 - - [04/Jun/2025 17:56:51] "GET / HTTP/1.1" 200 -
+10.2.74.140 - - [04/Jun/2025 17:56:51] "GET /output/product_management_workflow.png HTTP/1.1" 200 -
+10.2.58.81 - - [04/Jun/2025 17:59:39] "GET / HTTP/1.1" 304 -
+10.2.9.135 - - [04/Jun/2025 18:00:07] "GET / HTTP/1.1" 304 -
+10.2.9.135 - - [04/Jun/2025 18:00:08] "GET /output/product_management_workflow.png HTTP/1.1" 200 -

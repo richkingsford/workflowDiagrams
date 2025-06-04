@@ -25,7 +25,7 @@
       "id": 4,
       "type": "process",
       "text": "Redirect to Product Manager",
-      "next": [5]
+      "next": [2]
     },
     {
       "id": 9,
