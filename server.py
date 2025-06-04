@@ -53,6 +53,12 @@ class WorkflowHandler(http.server.SimpleHTTPRequestHandler):
             color: #333;
             text-align: center;
         }
+        .workflow-section {
+            margin: 40px 0;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
         .diagram-container {
             text-align: center;
             margin: 20px 0;
@@ -92,41 +98,98 @@ class WorkflowHandler(http.server.SimpleHTTPRequestHandler):
             padding: 15px;
             border-radius: 4px;
             overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .nav-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .nav-links a:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Requirements Workflow Diagram</h1>
+        <h1>Workflow Diagrams</h1>
         
-        <div class="diagram-container">
-            <h2>Wall-Crawling Concrete Smoothing Robot</h2>
-            <img src="/output/requirements_workflow.png" alt="Requirements Workflow Diagram">
+        <div class="nav-links">
+            <a href="#requirements">Requirements Workflow</a>
+            <a href="#product-management">Product Management Process</a>
         </div>
         
-        <div class="download-links">
-            <a href="/output/requirements_workflow.png" download>Download PNG</a>
-            <a href="/output/requirements_workflow.svg" download>Download SVG</a>
-            <a href="/output/requirements_workflow.dot" download>Download DOT Source</a>
-            <a href="/requirements_workflow.json" download>Download JSON</a>
+        <div class="workflow-section" id="requirements">
+            <h2>Requirements Workflow</h2>
+            <h3>Wall-Crawling Concrete Smoothing Robot</h3>
+            
+            <div class="diagram-container">
+                <img src="/output/requirements_workflow.png" alt="Requirements Workflow Diagram">
+            </div>
+            
+            <div class="download-links">
+                <a href="/output/requirements_workflow.png" download>Download PNG</a>
+                <a href="/output/requirements_workflow.svg" download>Download SVG</a>
+                <a href="/output/requirements_workflow.dot" download>Download DOT Source</a>
+                <a href="/requirements_workflow.json" download>Download JSON</a>
+            </div>
+            
+            <div class="json-container">
+                <h4>Source JSON Data</h4>
+                <pre id="requirements-json-content">Loading...</pre>
+            </div>
         </div>
         
-        <div class="json-container">
-            <h3>Source JSON Data</h3>
-            <p>The workflow diagram was generated from this JSON configuration:</p>
-            <pre id="json-content">Loading...</pre>
+        <div class="workflow-section" id="product-management">
+            <h2>Product Management Process</h2>
+            <h3>Request to Sprint Ready Workflow</h3>
+            
+            <div class="diagram-container">
+                <img src="/output/product_management_process_workflow.png" alt="Product Management Process Workflow Diagram">
+            </div>
+            
+            <div class="download-links">
+                <a href="/output/product_management_process_workflow.png" download>Download PNG</a>
+                <a href="/output/product_management_process_workflow.svg" download>Download SVG</a>
+                <a href="/output/product_management_process_workflow.dot" download>Download DOT Source</a>
+                <a href="/product_management_workflow.json" download>Download JSON</a>
+            </div>
+            
+            <div class="json-container">
+                <h4>Source JSON Data</h4>
+                <pre id="product-json-content">Loading...</pre>
+            </div>
         </div>
     </div>
     
     <script>
-        // Load and display JSON content
+        // Load and display Requirements JSON content
         fetch('/requirements_workflow.json')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('json-content').textContent = JSON.stringify(data, null, 2);
+                document.getElementById('requirements-json-content').textContent = JSON.stringify(data, null, 2);
             })
             .catch(error => {
-                document.getElementById('json-content').textContent = 'Error loading JSON: ' + error;
+                document.getElementById('requirements-json-content').textContent = 'Error loading JSON: ' + error;
+            });
+        
+        // Load and display Product Management JSON content
+        fetch('/product_management_workflow.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('product-json-content').textContent = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('product-json-content').textContent = 'Error loading JSON: ' + error;
             });
     </script>
 </body>

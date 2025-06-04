@@ -1,0 +1,70 @@
+{
+  "workflow": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Request Made",
+      "next": [2]
+    },
+    {
+      "id": 2,
+      "type": "decision",
+      "text": "Request to Product Manager?",
+      "next": [
+        { "condition": "Yes", "to": 3 },
+        { "condition": "No", "to": 4 }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "process",
+      "text": "Create Epic on Prioritized Product Backlog",
+      "next": [9]
+    },
+    {
+      "id": 4,
+      "type": "process",
+      "text": "Redirect to Product Manager",
+      "next": [5]
+    },
+    {
+      "id": 9,
+      "type": "decision",
+      "text": "Epic clear and viable?",
+      "next": [
+        { "condition": "Yes", "to": 5 },
+        { "condition": "No", "to": 10 }
+      ]
+    },
+    {
+      "id": 10,
+      "type": "process",
+      "text": "Refine the Epic",
+      "next": [9]
+    },
+    {
+      "id": 5,
+      "type": "process",
+      "text": "Product Managers Refine and Prioritize Epics",
+      "next": [6]
+    },
+    {
+      "id": 6,
+      "type": "process",
+      "text": "Engineering Creates Linked User Stories from Epics",
+      "next": [7]
+    },
+    {
+      "id": 7,
+      "type": "process",
+      "text": "User Stories Go into Upcoming Sprints",
+      "next": [8]
+    },
+    {
+      "id": 8,
+      "type": "end",
+      "text": "Sprint Ready",
+      "next": []
+    }
+  ]
+}
